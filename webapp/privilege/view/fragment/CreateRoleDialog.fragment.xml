@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:table="sap.ui.table" xmlns:core="sap.ui.core"
+	xmlns:privilege="sap.security.privilege.control">
+	<Dialog title="{path:'roleModel>/type', formatter:'.formatter.formatDialogTitle'}" resizable="true" contentWidth="700px"
+		contentHeight="450px">
+		<content>
+			<HBox class="sapUiLargeMarginEnd">
+				<VBox width="100%" class="sapUiSmallMarginBegin sapUiSmallMarginTop">
+					<Label text=" {i18n>createRoleName}" labelFor="idCreateRoleName" required="true"/>
+					<Input id="idRoleName" required="true" value="{roleModel>/name}" change="onInputChange"/>
+				</VBox>
+				<VBox width="100%" class="sapUiTinyMarginBegin sapUiSmallMarginTop sapUiLargeMarginEnd ">
+					<Label text=" {i18n>createRoleDescription}" labelFor="idCreateRoleDescription" required="true"/>
+					<Input id="idRoleDescription" required="true" value="{roleModel>/description}" change="onInputChange"/>
+				</VBox>
+			</HBox>
+		
+			<List items="{privilegeModel>/}" class="ItemBorder PrivilegeButton">
+				<CustomListItem>
+					<HBox>
+						<VBox width="100%" class="sapUiSmallMarginBegin sapUiSmallMarginTop">
+							<Label text=" Target Domain" required="true"/>
+							<ComboBox required="true" id="idCreateTargetDomain" items="{allTargetDomain>/}" selectedKey="{privilegeModel>targetDomain}" width="100%">
+								<core:Item key="{allTargetDomain>value}" text="{allTargetDomain>value}"/>
+							</ComboBox >
+						</VBox>
+						<VBox width="100%" class="sapUiTinyMarginBegin sapUiSmallMarginTop">
+							<Label text="Permission" required="true"/>
+							<MultiComboBox required="true" id="idCreatePermission" selectedKeys="{privilegeModel>permissionSet}" width="100%" items="{allPermission>/}">
+								<core:Item key="{allPermission>value}" text="{allPermission>value}"/>
+							</MultiComboBox>
+						</VBox>
+						<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTop" justifyContent="Center">
+							<Label text=" "/>
+							<Button press="onRemovePrivilege" tooltip="Remove a Item" icon="sap-icon://delete"
+								enabled="{path:'privilegeModel>/',formatter:'.formatter.deletePrivilegeButton'}"/>
+						</VBox>
+						<VBox class="sapUiSmallMarginTop sapUiSmallMarginEnd" justifyContent="Center">
+							<Label text=" "/>
+							<Button press="onAddPrivilege" tooltip="Add a Item" icon="sap-icon://add"/>
+						</VBox>
+					</HBox>
+				</CustomListItem>
+			</List>
+		</content>
+		<beginButton>
+			<Button text="{i18n>createRoleDialogOK}" press="onHandleCreateAction"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>createRoleDialogCancel}" press="onHandleCancleAction"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,138 @@
+{
+	"_version": "1.5.0",
+	"sap.app": {
+		"id": "sap.security.privilege",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appPrivilegeTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.security.core.view.App",
+			"type": "XML"
+		},
+		"resourceRoots": {
+            ".userroles": "../userroles"
+        },
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.suite.ui.commons":{},
+				"sap.ui.table":{}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.security.privilege.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			],
+			"js": [
+				{
+					"uri": "../core/lib/lodash.min.js"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.security.core.view",
+				"controlId": "idAppCoreControl",
+				"controlAggregation": "pages",
+				"transition": "none"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "privilege",
+					"target": "privilege"
+				},
+				{
+					"pattern": "roledetail/{roleId}",
+					"name": "roledetail",
+					"target": "roledetail"
+				},
+				{
+				"pattern": "userdetail/{id}",
+				"name": "userdetail",
+				"target": "userdetail"
+			}
+			],
+			"targets": {
+				"notFound": {
+					"viewPath": "sap.security.core.view",
+					"viewName": "NotFound",
+					"viewId": "ViewNotFound",
+					"controlAggregation": "pages"
+				},
+				"privilege": {
+					"viewPath": "sap.security.privilege.view",
+					"viewName": "Privilege",
+					"viewId": "ViewPrivilege",
+					"controlAggregation": "pages",
+					"viewLevel": 1
+				},
+				"roledetail": {
+					"viewPath": "sap.security.privilege.view",
+					"viewName": "RoleDetail",
+					"viewId": "ViewRoleDetail",
+					"controlAggregation": "pages",
+					"viewLevel": 2
+				},
+				"userdetail": {
+					"viewPath": ".userroles.view",
+					"viewName": "UserDetail",
+					"viewId": "ViewUserDetail",
+					"controlAggregation": "pages",
+					"viewLevel": 1
+				}
+			}
+		}
+	}
+}

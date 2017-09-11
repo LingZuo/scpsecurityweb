@@ -1,0 +1,42 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "sap.html5"
+  ],
+  "generation": [
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProjectCommon",
+      "templateVersion": "1.32.0",
+      "dateTimeStamp": "Mon, 03 Jul 2017 04:49:32 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProject",
+      "templateVersion": "1.40.12",
+      "dateTimeStamp": "Mon, 03 Jul 2017 04:49:34 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "basevalidator": {
+    "services": {
+      "xml": "fioriXmlAnalysis",
+      "js": "fioriJsValidator"
+    }
+  },
+  "codeCheckingTriggers": {
+    "notifyBeforePush": true,
+    "notifyBeforePushLevel": "Error",
+    "blockPush": false,
+    "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "ffaa5a17a",
+    "name": "scpsecurityweb",
+    "lastVersionWeTriedToDeploy": "0.1.325"
+  }
+}

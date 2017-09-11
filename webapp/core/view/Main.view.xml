@@ -1,0 +1,10 @@
+<mvc:View controllerName="sap.security.core.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<Page title="{i18n>title}">
+		<TileContainer height="80%">
+			<StandardTile id="userroles" icon="sap-icon://XMfont/SAPXMIcon-set_ListView" title="UserRole" press="onPressTile"/>
+			<StandardTile id="userprofile" icon="sap-icon://calendar" title="UserProfile" press="onPressTile"/>
+			<StandardTile id="privilege" icon="sap-icon://calendar" title="Privilege" press="onPressTile"/>
+		</TileContainer>
+	</Page>
+</mvc:View>

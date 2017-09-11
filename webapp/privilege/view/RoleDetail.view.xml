@@ -1,0 +1,78 @@
+<mvc:View controllerName="sap.security.privilege.controller.RoleDetail" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:table="sap.ui.table" xmlns:uxap="sap.uxap">
+	<Page class="pageDesktop" showHeader="false" enableScrolling="false">
+		<content>
+			<uxap:ObjectPageLayout id="idRoleDetailPage" enableLazyLoading="false" showTitleInHeaderContent="true" showEditHeaderButton="false"
+				showFooter="true">
+				<uxap:headerTitle>
+					<uxap:ObjectPageHeader id="idRoleDetailPageTitle" objectImageURI="" objectTitle="Role Name" objectImageShape="Square" objectImageAlt="Role Detail" objectSubtitle=""
+						isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false">
+						<uxap:breadCrumbsLinks>
+							<Link text="{i18n>roledetail}" enabled="false" visible="false"/>
+						</uxap:breadCrumbsLinks>
+					</uxap:ObjectPageHeader>
+				</uxap:headerTitle>
+				<uxap:sections>
+					<uxap:ObjectPageSection id="idRoleSection" title="{i18n>roleSectionTile}">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idRoleItemsSubSection" title="{i18n>roleSectionTile}">
+								<uxap:blocks>
+									<table:Table id="idUserRolesTable" rows="{userRoles>/}" selectionMode="None" ariaLabelledBy="title">
+										<table:toolbar>
+											<Toolbar>
+												<Title id="idUserRolesTableTitle" text="{i18n>items}"></Title>
+											</Toolbar>
+										</table:toolbar>
+										<table:columns>
+											<table:Column>
+												<Label text="{i18n>employeeNumber}"/>
+												<table:template>
+													<Text text="{userRoles>employeeNumber}" wrapping="false"/>
+												</table:template>
+											</table:Column>
+											<table:Column>
+												<Label text="{i18n>mobileNumber}"/>
+												<table:template>
+													<Text text="{userRoles>mobileNumber}" wrapping="false"/>
+												</table:template>
+											</table:Column>
+											<table:Column>
+												<Label text="{i18n>email}"/>
+												<table:template>
+													<Text text="{userRoles>email}" wrapping="false"/>
+												</table:template>
+											</table:Column>
+											<table:Column>
+												<Label text="{i18n>status}"/>
+												<table:template>
+													<Text text="{userRoles>status}" wrapping="false"/>
+												</table:template>
+											</table:Column>
+										</table:columns>
+									</table:Table>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="idAllPrivileges" title="{i18n>allPrivilegeSectionTitle}">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idAllPrivilegesSubSection" title="{i18n>allPrivilegeSectionTitle}">
+								<uxap:blocks>
+									<core:Fragment fragmentName=".userroles.view.fragment.AllPrivilege" type="XML"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+			</uxap:ObjectPageLayout>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="{i18n>edit}" press="onHandleEdit" visible="{ButtonStateModel>/EditVisible}"/>
+				<Button text="{i18n>delete}" press="onHandleDelete" visible="{ButtonStateModel>/DeleteVisible}"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

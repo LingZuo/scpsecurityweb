@@ -1,0 +1,294 @@
+[{
+	"createdby": "string",
+	"createddate": {
+		"calendarType": "string",
+		"fieldsComputed": 0,
+		"fieldsNormalized": 0,
+		"firstDayOfWeek": 0,
+		"lenient": true,
+		"minimalDaysInFirstWeek": 0,
+		"time": "2017-08-10T02:07:08.232Z",
+		"timeInMillis": 0,
+		"timeZone": {
+			"displayName": "string",
+			"dstsavings": 0,
+			"id": "string",
+			"rawOffset": 0
+		},
+		"weekCountData": {},
+		"weekDateSupported": true,
+		"weekYear": 0,
+		"weeksInWeekYear": 0,
+		"zoneShared": true
+	},
+	"description": "string",
+	"id": 0,
+	"lastmodifiedby": "string",
+	"lastmodifieddate": {
+		"calendarType": "string",
+		"fieldsComputed": 0,
+		"fieldsNormalized": 0,
+		"firstDayOfWeek": 0,
+		"lenient": true,
+		"minimalDaysInFirstWeek": 0,
+		"time": "2017-08-10T02:07:08.232Z",
+		"timeInMillis": 0,
+		"timeZone": {
+			"displayName": "string",
+			"dstsavings": 0,
+			"id": "string",
+			"rawOffset": 0
+		},
+		"weekCountData": {},
+		"weekDateSupported": true,
+		"weekYear": 0,
+		"weeksInWeekYear": 0,
+		"zoneShared": true
+	},
+	"name": "string",
+	"privilegeSet": [{
+		"createdby": "string",
+		"createddate": {
+			"calendarType": "string",
+			"fieldsComputed": 0,
+			"fieldsNormalized": 0,
+			"firstDayOfWeek": 0,
+			"lenient": true,
+			"minimalDaysInFirstWeek": 0,
+			"time": "2017-08-10T02:07:08.232Z",
+			"timeInMillis": 0,
+			"timeZone": {
+				"displayName": "string",
+				"dstsavings": 0,
+				"id": "string",
+				"rawOffset": 0
+			},
+			"weekCountData": {},
+			"weekDateSupported": true,
+			"weekYear": 0,
+			"weeksInWeekYear": 0,
+			"zoneShared": true
+		},
+		"id": 0,
+		"lastmodifiedby": "string",
+		"lastmodifieddate": {
+			"calendarType": "string",
+			"fieldsComputed": 0,
+			"fieldsNormalized": 0,
+			"firstDayOfWeek": 0,
+			"lenient": true,
+			"minimalDaysInFirstWeek": 0,
+			"time": "2017-08-10T02:07:08.232Z",
+			"timeInMillis": 0,
+			"timeZone": {
+				"displayName": "string",
+				"dstsavings": 0,
+				"id": "string",
+				"rawOffset": 0
+			},
+			"weekCountData": {},
+			"weekDateSupported": true,
+			"weekYear": 0,
+			"weeksInWeekYear": 0,
+			"zoneShared": true
+		},
+		"permission": "All",
+		"targetDomain": "All"
+	},{
+		"createdby": "string",
+		"createddate": {
+			"calendarType": "string",
+			"fieldsComputed": 0,
+			"fieldsNormalized": 0,
+			"firstDayOfWeek": 0,
+			"lenient": true,
+			"minimalDaysInFirstWeek": 0,
+			"time": "2017-08-10T02:07:08.232Z",
+			"timeInMillis": 0,
+			"timeZone": {
+				"displayName": "string",
+				"dstsavings": 0,
+				"id": "string",
+				"rawOffset": 0
+			},
+			"weekCountData": {},
+			"weekDateSupported": true,
+			"weekYear": 0,
+			"weeksInWeekYear": 0,
+			"zoneShared": true
+		},
+		"id": 1,
+		"lastmodifiedby": "string",
+		"lastmodifieddate": {
+			"calendarType": "string",
+			"fieldsComputed": 0,
+			"fieldsNormalized": 0,
+			"firstDayOfWeek": 0,
+			"lenient": true,
+			"minimalDaysInFirstWeek": 0,
+			"time": "2017-08-10T02:07:08.232Z",
+			"timeInMillis": 0,
+			"timeZone": {
+				"displayName": "string",
+				"dstsavings": 0,
+				"id": "string",
+				"rawOffset": 0
+			},
+			"weekCountData": {},
+			"weekDateSupported": true,
+			"weekYear": 0,
+			"weeksInWeekYear": 0,
+			"zoneShared": true
+		},
+		"permission": "All",
+		"targetDomain": "All"
+	}]
+},
+{
+	"createdby": "string",
+	"createddate": {
+		"calendarType": "string",
+		"fieldsComputed": 0,
+		"fieldsNormalized": 0,
+		"firstDayOfWeek": 0,
+		"lenient": true,
+		"minimalDaysInFirstWeek": 0,
+		"time": "2017-08-10T02:07:08.232Z",
+		"timeInMillis": 0,
+		"timeZone": {
+			"displayName": "string",
+			"dstsavings": 0,
+			"id": "string",
+			"rawOffset": 0
+		},
+		"weekCountData": {},
+		"weekDateSupported": true,
+		"weekYear": 0,
+		"weeksInWeekYear": 0,
+		"zoneShared": true
+	},
+	"description": "string",
+	"id": 1,
+	"lastmodifiedby": "string",
+	"lastmodifieddate": {
+		"calendarType": "string",
+		"fieldsComputed": 0,
+		"fieldsNormalized": 0,
+		"firstDayOfWeek": 0,
+		"lenient": true,
+		"minimalDaysInFirstWeek": 0,
+		"time": "2017-08-10T02:07:08.232Z",
+		"timeInMillis": 0,
+		"timeZone": {
+			"displayName": "string",
+			"dstsavings": 0,
+			"id": "string",
+			"rawOffset": 0
+		},
+		"weekCountData": {},
+		"weekDateSupported": true,
+		"weekYear": 0,
+		"weeksInWeekYear": 0,
+		"zoneShared": true
+	},
+	"name": "string",
+	"privilegeSet": [{
+		"createdby": "string",
+		"createddate": {
+			"calendarType": "string",
+			"fieldsComputed": 0,
+			"fieldsNormalized": 0,
+			"firstDayOfWeek": 0,
+			"lenient": true,
+			"minimalDaysInFirstWeek": 0,
+			"time": "2017-08-10T02:07:08.232Z",
+			"timeInMillis": 0,
+			"timeZone": {
+				"displayName": "string",
+				"dstsavings": 0,
+				"id": "string",
+				"rawOffset": 0
+			},
+			"weekCountData": {},
+			"weekDateSupported": true,
+			"weekYear": 0,
+			"weeksInWeekYear": 0,
+			"zoneShared": true
+		},
+		"id": 0,
+		"lastmodifiedby": "string",
+		"lastmodifieddate": {
+			"calendarType": "string",
+			"fieldsComputed": 0,
+			"fieldsNormalized": 0,
+			"firstDayOfWeek": 0,
+			"lenient": true,
+			"minimalDaysInFirstWeek": 0,
+			"time": "2017-08-10T02:07:08.232Z",
+			"timeInMillis": 0,
+			"timeZone": {
+				"displayName": "string",
+				"dstsavings": 0,
+				"id": "string",
+				"rawOffset": 0
+			},
+			"weekCountData": {},
+			"weekDateSupported": true,
+			"weekYear": 0,
+			"weeksInWeekYear": 0,
+			"zoneShared": true
+		},
+		"permission": "All",
+		"targetDomain": "All"
+	}]
+},
+{
+	"createdby": "string",
+	"createddate": {
+		"calendarType": "string",
+		"fieldsComputed": 0,
+		"fieldsNormalized": 0,
+		"firstDayOfWeek": 0,
+		"lenient": true,
+		"minimalDaysInFirstWeek": 0,
+		"time": "2017-08-10T02:07:08.232Z",
+		"timeInMillis": 0,
+		"timeZone": {
+			"displayName": "string",
+			"dstsavings": 0,
+			"id": "string",
+			"rawOffset": 0
+		},
+		"weekCountData": {},
+		"weekDateSupported": true,
+		"weekYear": 0,
+		"weeksInWeekYear": 0,
+		"zoneShared": true
+	},
+	"description": "string",
+	"id": 2,
+	"lastmodifiedby": "string",
+	"lastmodifieddate": {
+		"calendarType": "string",
+		"fieldsComputed": 0,
+		"fieldsNormalized": 0,
+		"firstDayOfWeek": 0,
+		"lenient": true,
+		"minimalDaysInFirstWeek": 0,
+		"time": "2017-08-10T02:07:08.232Z",
+		"timeInMillis": 0,
+		"timeZone": {
+			"displayName": "string",
+			"dstsavings": 0,
+			"id": "string",
+			"rawOffset": 0
+		},
+		"weekCountData": {},
+		"weekDateSupported": true,
+		"weekYear": 0,
+		"weeksInWeekYear": 0,
+		"zoneShared": true
+	},
+	"name": "string",
+	"privilegeSet": []
+}]

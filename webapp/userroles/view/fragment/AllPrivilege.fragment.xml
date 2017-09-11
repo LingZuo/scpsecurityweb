@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"	xmlns:l="sap.ui.layout">
+	<List id="idAllPrivilegesList" headerText="" showSeparators="None" backgroundDesign="Transparent" growingThreshold="10" growing="true" items="{path: 'AllPrivilege>/'}" >
+		<CustomListItem class="sapUiSmallMarginTop">
+			<HBox>
+				<VBox> 
+				<Label text="{AllPrivilege>id}"/>
+				</VBox>
+				<VBox  class="sapUiLargeMarginBegin" >
+					<Label text="{i18n>targetDomain}: {AllPrivilege>targetDomain}"/>
+					<Label text="{i18n>permission}: {AllPrivilege>permission}"/>
+				</VBox>
+			</HBox>
+		</CustomListItem>
+	</List>
+</core:FragmentDefinition>

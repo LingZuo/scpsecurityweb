@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog id="idRoleAssignmentPopup" noDataText="{i18n>noRoleFound}" title="{i18n>AssignmentPopupTitle}" multiSelect="true"
+		rememberSelections="false" contentHeight="300px" search="onHandleSearch" confirm="onHandleConfirmAssignment"
+		cancel="onHandleCancelAssignment" items="{ path : 'RolesSetModel>/', sorter : { path : 'id', descending : false } }">
+		<columns>
+			<Column>
+				<header>
+					<Text text="{i18n>roleId}"/>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="{i18n>roleName}"/>
+				</header>
+			</Column>
+			<Column >
+				<header>
+					<Text text="{i18n>roleDescription}"/>
+				</header>
+			</Column>
+		</columns>
+		<ColumnListItem>
+			<cells>
+				<Text text="{RolesSetModel>id}"/>
+				<Text text="{RolesSetModel>name}"/>
+				<Text text="{RolesSetModel>description}"/>
+			</cells>
+		</ColumnListItem>
+	</TableSelectDialog>
+</core:FragmentDefinition>

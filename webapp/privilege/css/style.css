@@ -1,0 +1,14 @@
+/* Enter your custom styles here */
+
+.PrivilegeButton .sapMBtnInner {
+        background-color: transparent;
+        border: 0
+}
+
+.ItemBorder .sapMLIB {
+	border: none;
+}
+
+.sapUiTableFtr .PaginatorText {
+	font-weight: normal;
+}

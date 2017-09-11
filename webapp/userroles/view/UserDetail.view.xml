@@ -1,0 +1,134 @@
+<mvc:View controllerName="sap.security.userroles.controller.UserDetail" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core"
+	xmlns:table="sap.ui.table" xmlns:uxap="sap.uxap">
+	<Page id="idUserDetailPage" class="pageDesktop" showHeader="false" enableScrolling="false">
+		<content>
+			<uxap:ObjectPageLayout id="idUserDetailObjectPage" enableLazyLoading="false" showTitleInHeaderContent="true" showEditHeaderButton="false"
+				showFooter="true" class="UserInfoObjectpageHeader">
+				<uxap:headerTitle>
+					<uxap:ObjectPageHeader objectImageURI="sap/fiori/scpsecurityweb/webapp/userroles/mockData/default_image.png"
+						objectTitle="{UserDetailModel>/loginName}" objectImageShape="Square" objectSubtitle="" isObjectIconAlwaysVisible="false"
+						isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false"></uxap:ObjectPageHeader>
+				</uxap:headerTitle>
+				<uxap:headerContent>
+					<layout:VerticalLayout>
+						<u:FileUploader class="hide" id="fileUploader" icon="sap-icon://upload" buttonOnly="true" sameFilenameAllowed="true" multiple="false"
+							buttonText="{i18n>updateImage}" change="handleUploadImage" name="myFileUpload" visible="{ButtonStateModel>/UserInfoEditable}"/>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout>
+						<Label id="idLoginNameLabel" text="{i18n>loginName}:" required="{ButtonStateModel>/UserInfoEditable}"/>
+						<Input id="idLoginName" value="{UserDetailModel>/loginName}" required="true" editable="{ButtonStateModel>/UserInfoEditable}"
+							change=".onChange"/>
+						<Label id="idEmailLabel" text="{i18n>email}:" required="{ButtonStateModel>/UserInfoEditable}"/>
+						<Input id="idEmail" value="{UserDetailModel>/email}" required="true" editable="{ButtonStateModel>/UserInfoEditable}" change=".onChange"/>
+						<Label id="idStatusLabel" text="{i18n>status}:" required="{ButtonStateModel>/UserInfoEditable}"/>
+						<ComboBox id="idUserStatusSelection" editable="{ButtonStateModel>/UserInfoEditable}"
+							items="{ path: 'PageEnumsModel>/UserStatus/', sorter:{path:'value'} }">
+							<core:Item text="{PageEnumsModel>value}" key="{PageEnumsModel>value}"/>
+						</ComboBox>
+						<Label id="idUserTypeLabel" text="{i18n>type}:" required="{ButtonStateModel>/UserInfoEditable}"/>
+						<ComboBox id="idUserTypeSelection" editable="{ButtonStateModel>/UserInfoEditable}"
+							items="{ path: 'PageEnumsModel>/UserType/', sorter:{path:'value'} }">
+							<core:Item text="{PageEnumsModel>value}" key="{PageEnumsModel>value}"/>
+						</ComboBox>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout>
+						<Label id="idFirstNameLabel" text="{i18n>firstName}:" required="{ButtonStateModel>/UserInfoEditable}"/>
+						<Input id="idFirstName" value="{UserDetailModel>/firstName}" required="true" editable="{ButtonStateModel>/UserInfoEditable}"
+							change=".onChange"/>
+						<Label id="idBirthdayLabel" text="{i18n>birthday}:"/>
+						<DatePicker id="idBirthday" value="{UserDetailModel>/dateOfBirth}" valueFormat="yyyy-MM-dd" editable="{ButtonStateModel>/UserInfoEditable}"
+							displayFormat="long"/>
+						<Label id="idGenderLabel" text="{i18n>gender}:" required="{ButtonStateModel>/UserInfoEditable}"/>
+						<ComboBox id="idUserGenderSelection" editable="{ButtonStateModel>/UserInfoEditable}"
+							items="{ path: 'PageEnumsModel>/Gender/', sorter:{path:'value'} }">
+							<core:Item text="{PageEnumsModel>value}" key="{PageEnumsModel>value}"/>
+						</ComboBox>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout>
+						<Label id="idLastNameLabel" text="{i18n>lastName}:" required="{ButtonStateModel>/UserInfoEditable}"/>
+						<Input id="idLastName" value="{UserDetailModel>/lastName}" required="true" editable="{ButtonStateModel>/UserInfoEditable}"
+							change=".onChange"/>
+						<Label id="idEmployeeNumberLabel" text="{i18n>employeeNumber}:"/>
+						<Input id="idEmployeeNumber" value="{UserDetailModel>/employeeNumber}" editable="{ButtonStateModel>/UserInfoEditable}"/>
+						<Label id="idMobileNumberLabel" text="{i18n>mobileNumber}:"/>
+						<Input id="idMobileNumber" value="{UserDetailModel>/mobileNumber}" editable="{ButtonStateModel>/UserInfoEditable}"/>
+					</layout:VerticalLayout>
+				</uxap:headerContent>
+				<uxap:sections>
+					<uxap:ObjectPageSection id="idRoleSection" title="{i18n>roleSectionTile}">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idRoleItemsSubSection" title="{i18n>roleSectionTile}">
+								<uxap:blocks>
+									<table:TreeTable id="idRoleItemsTable" rows="{path:'UserDetailModel>/roleSet', parameters: {arrayNames:['privilegeSet']}}"
+										selectionMode="MultiToggle" rowSelectionChange="onHandleRowSelectionChange" toggleOpenState="onHandleToggleOpenState" enableSelectAll="true"
+										ariaLabelledBy="title">
+										<table:toolbar>
+											<Toolbar>
+												<Title id="idTableTitle" text="{i18n>items}"/>
+												<ToolbarSpacer/>
+												<Button icon="sap-icon://add" tooltip="{i18n>assignRoles}" press="onHandleAssign" visible="{ButtonStateModel>/updateVisible}"/>
+												<Button icon="sap-icon://delete" tooltip="{i18n>unAssignRoles}" press="onHandleUnassign" enabled="{ButtonStateModel>/UnAssignRole}"
+													visible="{ButtonStateModel>/updateVisible}"/>
+											</Toolbar>
+										</table:toolbar>
+										<table:columns>
+											<table:Column >
+												<Label text="{i18n>roleId}"/>
+												<table:template>
+													<Text text="{UserDetailModel>id}"/>
+												</table:template>
+											</table:Column>
+											<table:Column >
+												<Label text="{i18n>roleName}"/>
+												<table:template>
+													<Text text="{UserDetailModel>name}"/>
+												</table:template>
+											</table:Column>
+											<table:Column >
+												<Label text="{i18n>roleDescription}"/>
+												<table:template>
+													<Text text="{UserDetailModel>description}"/>
+												</table:template>
+											</table:Column>
+											<table:Column >
+												<Label text="{i18n>roleCreatedOn}"/>
+												<table:template>
+													<Text text="{UserDetailModel>createddate/time}"/>
+												</table:template>
+											</table:Column>
+											<table:Column>
+												<Label text="{i18n>roleCreatedBy}"/>
+												<table:template>
+													<Text text="{UserDetailModel>createdby}"/>
+												</table:template>
+											</table:Column>
+										</table:columns>
+									</table:TreeTable>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="idAllPrivileges" title="{i18n>allPrivilegeSectionTitle}">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idAllPrivilegesSubSection" title="{i18n>allPrivilegeSectionTitle}">
+								<uxap:blocks>
+									<core:Fragment fragmentName="sap.security.userroles.view.fragment.AllPrivilege" type="XML"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+			</uxap:ObjectPageLayout>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="{i18n>edit}" press="onHandleEdit" visible="{ButtonStateModel>/EditVisible}"/>
+				<Button text="{i18n>delete}" press="onHandleDelete" visible="{ButtonStateModel>/UserDeletable}"/>
+				<Button text="{i18n>save}" press="onHandleSave" visible="{ButtonStateModel>/SaveVisible}"/>
+				<Button text="{i18n>cancel}" press="onHandlecancel" visible="{ButtonStateModel>/SaveVisible}"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

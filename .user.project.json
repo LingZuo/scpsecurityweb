@@ -1,0 +1,76 @@
+{
+  "run": [
+    {
+      "filePath": "/webapp/core/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": false,
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 7792670,
+        "displayName": "Run index.html 3",
+        "lastRunTimeStamp": 1502179371880
+      }
+    },
+    {
+      "filePath": "/webapp/userprofile/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "workspace": "withoutWorkspace",
+      "urlParameters": [],
+      "backendSystem": [],
+      "_metadata": {
+        "runnerId": "qunitrunner",
+        "id": 9968352,
+        "displayName": "Run index.html 2",
+        "lastRunTimeStamp": 1502090243077
+      }
+    },
+    {
+      "filePath": "/webapp/roleprivilege/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 4959365,
+        "displayName": "Run index.html",
+        "lastRunTimeStamp": 1502089447109
+      }
+    },
+    {
+      "filePath": "/webapp/userrole/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 6403659,
+        "displayName": "Run index.html 1",
+        "lastRunTimeStamp": 1502089411525
+      }
+    }
+  ]
+}

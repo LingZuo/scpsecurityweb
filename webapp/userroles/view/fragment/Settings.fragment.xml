@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog id="idViewSettingsPopup" noDataText="{i18n>noColumnFound}" title="{i18n>settingsPopupTitle}" confirm="onHandleConfirm" cancel="onHandleCancelViewSettings" search="onHandleSearch"
+		multiSelect="true" rememberSelections="true" contentHeight="300px" items="{ path: '/' }">
+		<StandardListItem title="{name}"/>
+	</SelectDialog>
+</core:FragmentDefinition>

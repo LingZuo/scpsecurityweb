@@ -1,0 +1,30 @@
+/* Enter your custom styles here */
+
+.UserInfoObjectpageHeader .sapUxAPObjectPageHeaderContent .sapUxAPObjectPageHeaderContentItem {
+    /*margin-right: 3rem;*/
+    width: 220px;
+}
+
+.UserInfoObjectpageHeader .sapUxAPObjectPageHeaderContentImageContainer .sapMImg {
+    height: 10rem !important;
+}
+
+.UserInfoObjectpageHeader .sapMInputBaseReadonlyInner {
+    border-color: transparent;
+    background: transparent;
+    padding: 2px 0px 1rem 0px;
+}
+
+.UserInfoObjectpageHeader .sapMComboBoxTextFieldReadonly {
+    border: none;
+}
+
+.UserInfoObjectpageHeader .sapUiFup:active .sapMBtnInner {
+    background-color: transparent;
+    border-color: #ababab;
+    color: #346187;
+}
+
+.UserInfoObjectpageHeader .sapUiFup:active .sapMBtnInner .sapMBtnIcon {
+    color: #346187;
+}
