@@ -1,9 +1,0 @@
-<mvc:View
-		controllerName="sap.security.core.controller.App"
-		xmlns:mvc="sap.ui.core.mvc"
-		displayBlock="true"
-		busy="{appView>/busy}"
-		busyIndicatorDelay="{appView>/delay}"
-		xmlns="sap.m">
-	<App id="idAppCoreControl" />
-</mvc:View>
